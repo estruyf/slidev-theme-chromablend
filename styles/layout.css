@@ -1,0 +1,88 @@
+:root {
+  /* default theme color */
+  /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-primary: #5d8392;
+
+  --slidev-theme-color: #f9e0d9;
+  --slidev-theme-link: #f9e0d9;
+  --slidev-theme-link-hover: #cfcfea;
+
+  --slidev-theme-background-angle: 180deg;
+  --slidev-theme-background-from: #161616 30%;
+  --slidev-theme-background-to: #313845 100%;
+
+  --slidev-theme-heading-angle: 45deg;
+  --slidev-theme-heading-from: #ff2e74 20%;
+  --slidev-theme-heading-to: #eac435 80%;
+
+  /* Cover */
+  --slidev-theme-cover-title-angle:;
+  --slidev-theme-cover-title-from:;
+  --slidev-theme-cover-title-to:;
+
+  --slidev-theme-font-size: 1.1em;
+}
+
+.slidev-layout {
+  --chromablend-background: linear-gradient(
+    var(--slidev-theme-background-angle),
+    var(--slidev-theme-background-from),
+    var(--slidev-theme-background-to)
+  );
+
+  --chromablend-cover-title: linear-gradient(
+    var(--slidev-theme-cover-title-angle, var(--slidev-theme-heading-angle)),
+    var(--slidev-theme-cover-title-from, var(--slidev-theme-heading-from)),
+    var(--slidev-theme-cover-title-to, var(--slidev-theme-heading-to))
+  );
+}
+
+.dark #slide-content,
+.dark .bg-main,
+.slidev-layout {
+  background: var(--chromablend-background);
+  color: var(--slidev-theme-color);
+  font-size: var(--slidev-theme-font-size, 1.1em);
+
+  a {
+    color: var(--slidev-theme-link);
+
+    &:visited {
+      color: var(--slidev-theme-link);
+    }
+
+    &:hover,
+    &.active,
+    &:focus {
+      color: var(--slidev-theme-link-hover);
+    }
+  }
+}
+
+/* Cover and intro slide */
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-center text-6xl leading-20 font-900 bg-clip-text;
+
+    background-image: var(--chromablend-cover-title);
+    -webkit-text-fill-color: transparent;
+  }
+
+  h1 + p {
+    @apply text-center text-xl;
+  }
+}
+
+/* Default slide */
+.slidev-layout.default,
+.slidev-layout[layout="default"] {
+  h1 {
+    @apply text-4xl font-900 bg-clip-text;
+
+    background-image: var(--chromablend-cover-title);
+    -webkit-text-fill-color: transparent;
+  }
+}
