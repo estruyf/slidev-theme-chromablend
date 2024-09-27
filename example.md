@@ -2,13 +2,6 @@
 theme: ./
 
 themeConfig:
-  heading-angle: "0deg"
-  heading-from: "yellow"
-  heading-to: "green"
-
-  cover-title-angle: "45deg"
-  cover-title-from: "yellow"
-  cover-title-to: "red"
 ---
 
 # ChromaBlend
@@ -16,8 +9,26 @@ themeConfig:
 Created by [Elio Struyf](https://elio.dev)
 
 ---
+layout: cover
+---
 
-# What is Slidev?
+# Cover
+
+This is a cover slide
+
+---
+layout: center
+---
+
+# Center
+
+This is a centered slide
+
+---
+layout: default
+---
+
+# Default
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -35,24 +46,30 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 ---
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel
-
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
+layout: section
 ---
 
+# Section title
+
+Subtitle for the section
+
+---
+layout: two-cols
+---
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+
+---
 layout: image-right
-image: <https://cover.sli.dev>
+image: https://cover.sli.dev
 ---
 
 # Code
@@ -75,7 +92,6 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
-
 layout: center
 class: "text-center"
 ---

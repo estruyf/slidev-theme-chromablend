@@ -41,6 +41,47 @@ This theme provides the following components:
 
 > TODO:
 
+## Customizations
+
+```yaml
+themeConfig:
+  # Background
+  background-angle: "180deg";
+  background-from: "#161616 30%";
+  background-to: "#313845 100%";
+
+  # Text
+  color: "#f9e0d9"
+  link: "#f9e0d9"
+  link-hover: "#cfcfea"
+  font-size: "1.1em"
+
+  # Heading
+  heading-angle: "45deg"
+  heading-from: '#ff2e74 20%'
+  heading-to: "#eac435 80%"
+
+  # Default
+  default-angle:
+  default-from:
+  default-to:
+
+  # Cover
+  cover-title-angle:
+  cover-title-from:
+  cover-title-to:
+
+  # Center
+  center-title-angle:
+  center-title-from:
+  center-title-to:
+
+  # Section
+  section-title-angle:
+  section-title-from:
+  section-title-to:
+```
+
 ## Contributing
 
 - `npm install`
